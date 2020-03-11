@@ -26,6 +26,9 @@ class PopupController {
 	};
 
 	close() {
+		window.history.back();
+		window.history.back();
+
 		this.popup.close();
 	}
 
