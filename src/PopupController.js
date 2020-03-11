@@ -26,7 +26,6 @@ class PopupController {
 	};
 
 	close() {
-		console.log("deve fechar aqui")
 		this.popup.close();
 	}
 
