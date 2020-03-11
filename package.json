@@ -32,18 +32,12 @@
     "type": "git",
     "url": "git+https://github.com/MauricioMilano/appid-clientsdk-js"
   },
-  "main": "dist/appid.umd.min.js",
+  "main": "dist/index.js",
   "license": "Apache-2.0",
   "nyc": {
     "all": true,
     "include": [
       "src/*.js"
-    ],
-    "exclude": [
-      "**/PopupController.js",
-      "**/IFrameController.js",
-      "**/OpenIDConfigurationResource.js",
-      "**/constants.js"
     ]
   },
   "dependencies": {
