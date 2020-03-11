@@ -26,7 +26,7 @@ class PopupController {
 	};
 
 	close() {
-		this.window.open('localhost:4200',"self");
+		console.log("deve fechar aqui")
 		this.popup.close();
 	}
 
