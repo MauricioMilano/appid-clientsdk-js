@@ -26,9 +26,7 @@ class PopupController {
 	};
 
 	close() {
-		window.history.back();
-		window.history.back();
-
+		this.window.open('localhost:4200',"self");
 		this.popup.close();
 	}
 
