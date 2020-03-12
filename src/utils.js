@@ -83,8 +83,8 @@ class Utils {
 	async performOAuthFlowAndGetTokens({userId, origin, clientId, endpoint, changeDetailsCode}) {
 		const {codeVerifier, state, nonce, url} = this.getAuthParamsAndUrl({userId, origin, clientId, endpoint, changeDetailsCode});
 
-		this.popup.open();
-		this.popup.navigate(url);
+		this.popup.open(url);
+		// this.popup.navigate(url);
 		const message = await this.popup.waitForMessage({messageType: 'authorization_response'});
 		this.popup.close();
 		this.verifyMessage({message, state});
