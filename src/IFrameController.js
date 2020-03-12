@@ -8,8 +8,8 @@ class IFrameController {
 	open(url) {
 		this.iFrame = this.window.document.createElement('iframe');
 		this.iFrame.src = url;
-		this.iFrame.width = 300;
-		this.iFrame.height = 800;
+		this.iFrame.width = 0;
+		this.iFrame.height = 0;
 		this.window.document.body.appendChild(this.iFrame);
 	}
 
