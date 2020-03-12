@@ -29,10 +29,11 @@ class PopupController {
 	};
 
 	close() {
-		this.popup.close();
+		this.popup.remove();
 	}
 
 	async waitForMessage({messageType}) {
+		return this.popup.waitForMessage({messageType});
 		return new Promise((resolve, reject) => {
 			const timer = setInterval(() => {
 				if(this.popup.closed) {
