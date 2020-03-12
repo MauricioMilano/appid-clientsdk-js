@@ -1,8 +1,10 @@
 const PopupError = require('./errors/PopupError');
-
+const IFrameController = require('./IFrameController');
 class PopupController {
 	constructor({w = window} = {}) {
 		this.window = w;
+		this.popup = new IFrameController();
+
 	};
 
 	init(popupConfig){
@@ -15,7 +17,8 @@ class PopupController {
 		const type = this.popupConfig.iframe?this.popupConfig.iframe:"popup";
 		const left = (window.screen.width - w) / 2;
 		const top = (window.screen.height - h) / 2;
-		this.popup = this.window.open(url, type, `left=${left},top=${top},width=${w},height=${h},resizable,scrollbars=yes,status=1`);
+		// this.popup = this.window.open(url, type, `left=${left},top=${top},width=${w},height=${h},resizable,scrollbars=yes,status=1`);
+		this.popup.open(url)
 		if (!this.popup) {
 			throw new PopupError('Unable to open popup')
 		}
