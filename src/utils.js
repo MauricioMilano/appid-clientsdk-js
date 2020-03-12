@@ -86,7 +86,7 @@ class Utils {
 		this.popup.open(url);
 		// this.popup.navigate(url);
 		const message = await this.popup.waitForMessage({messageType: 'authorization_response'});
-		this.popup.close();
+		this.popup.remove();
 		this.verifyMessage({message, state});
 		let authCode = message.data.code;
 
